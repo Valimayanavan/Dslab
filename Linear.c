@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() {
-    int array[100], search, c, number;
-
+void main() {
+    int array[100], search, c, number,found;
+    clrscr();
     printf("Enter the number of elements in array: ");
     scanf("%d", &number);
 
@@ -14,19 +14,19 @@ int main() {
     printf("Enter the number to search: ");
     scanf("%d", &search);
 
-    int found = 0; // Flag to indicate if the number was found
+    found = 0; 
 
     for (c = 0; c < number; c++) {
-        if (array[c] == search) { // Corrected to use '==' for comparison
+        if (array[c] == search) { 
             printf("%d is present at location %d\n", search, c + 1);
-            found = 1; // Set flag to true
-            break; // Exit loop if found
+            found = 1; 
+            break; 
         }
     }
 
-    if (!found) { // Check if the number was not found
+    if (!found) { 
         printf("%d is not present in array\n", search);
     }
 
-    return 0;
+    getch();
 }
