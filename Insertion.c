@@ -17,9 +17,9 @@ int* insertionSort(int array[], int n) {
     return array;
 }
 
-int main() {
+void main() {
     int array[1000], n, i;
-
+    clrscr();
     printf("Enter the number of elements you want to sort: ");
     scanf("%d", &n);
 
@@ -36,5 +36,5 @@ int main() {
     }
     printf("\n");
 
-    return 0;
+getch();
 }
