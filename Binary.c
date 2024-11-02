@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int n, c, first, last, middle, search, array[100];
-
+    clrscr();
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
@@ -34,5 +34,5 @@ int main() {
         printf("Not found! %d is not present in the list\n", search);
     }
 
-    return 0;
+    getch();
 }
