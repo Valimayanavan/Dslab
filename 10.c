@@ -50,13 +50,15 @@ int main() {
     }
 }
 
-void insert(int a[], int *n, int data) {
+void insert(int a[], int *n, int data)
+{
+int i;
     if (*n >= MAX) {
-        printf("Queue is Full\n");
-        return;
+	printf("Queue is Full\n");
+	return;
     }
 
-    int i = (*n)++;
+    i = (*n)++;
     a[i] = data;
 
     // Heapify-up
@@ -67,16 +69,17 @@ void insert(int a[], int *n, int data) {
 }
 
 int del_hi_priori(int a[], int *n) {
+    int root,i;
     if (*n <= 0) {
-        printf("Queue is Empty!\n");
-        return 0;
+	printf("Queue is Empty!\n");
+	return 0;
     }
 
-    int root = a[0];
+     root = a[0];
     a[0] = a[--(*n)];
 
     // Heapify-down
-    int i = 0;
+    i = 0;
     while (1) {
         int l = left(i);
         int r = right(i);
@@ -110,12 +113,13 @@ int right(int i) {
 }
 
 void display(int a[], int n) {
+    int i;
     if (n == 0) {
-        printf("Queue is Empty!\n");
-        return;
+	printf("Queue is Empty!\n");
+	return;
     }
 
-    for (int i = 0; i < n; i++) {
+    for ( i = 0; i < n; i++) {
         printf("%d ", a[i]);
     }
     printf("\n");
